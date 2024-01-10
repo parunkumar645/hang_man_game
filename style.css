@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: rgb(30%, 20%, 50%);
+}
+
+.container {
+  font-size: 16px;
+  background-color: #ffffff;
+  width: 90vw;
+  max-width: 34em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 3em;
+  border-radius: 0.6em;
+  box-shadow: 0 1.2em 2.4em rgba(111, 85, 0, 0.25);
+}
+
+#options-container {
+  text-align: center;
+}
+
+#options-container div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Adjusted for smaller screens */
+  justify-content: center;
+  gap: 1em; /* Increased gap for smaller screens */
+  margin: 1.2em 0 2.4em 0;
+}
+
+#options-container button {
+  padding: 0.6em 1.2em;
+  border: 3px solid #fff;
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 0.3em;
+  text-transform: capitalize;
+  margin: 0.5em; /* Added margin for smaller screens */
+}
+
+#options-container button:disabled {
+  border: 3px solid #808080;
+  color: #808080;
+  background-color: #efefef;
+}
+
+#options-container button.active {
+  background-color: #f4c531;
+  border: 3px solid #fff;
+  color: #fff;
+}
+
+.letter-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6em;
+}
+
+#letter-container button {
+  height: 2.4em;
+  width: 2.4em;
+  border-radius: 0.3em;
+  background-color: #4caf50;
+  color: #fff;
+  margin: 0.5em; /* Added margin for smaller screens */
+}
+
+.new-game-popup {
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 0.6em;
+}
+
+#user-input-section {
+  display: flex;
+  justify-content: center;
+  font-size: 1.8em;
+  margin: 0.6em 0 1.2em 0;
+}
+
+canvas {
+  display: block;
+  margin: auto;
+  border: 1px solid #fff;
+}
+
+.hide {
+  display: none;
+}
+
+#result-text h2 {
+  font-size: 1.8em;
+  text-align: center;
+}
+
+#result-text p {
+  font-size: 1.25em;
+  margin: 1em 0 2em 0;
+}
+
+#result-text span {
+  font-weight: 600;
+}
+
+#new-game-button {
+  font-size: 1.25em;
+  padding: 0.5em 1em;
+  background-color: #4caf50;
+  border: 3px solid #fff;
+  color: #fff;
+  border-radius: 0.2em;
+  margin-top: 1em; /* Adjusted margin for smaller screens */
+}
+
+.win-msg {
+  color: #39d78d;
+}
+
+.lose-msg {
+  color: #fe5152;
+}
+
+/* Media Query for smaller screens */
+@media only screen and (max-width: 600px) {
+  #options-container div {
+    gap: 0.5em; /* Further reduced gap for very small screens */
+  }
+
+  #options-container button,
+  #letter-container button {
+    width: 40%; /* Adjusted button width for small screens */
+  }
+
+  #new-game-button {
+    width: 80%; /* Adjusted button width for small screens */
+  }
+}
